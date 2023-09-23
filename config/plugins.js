@@ -1,8 +1,8 @@
 module.exports = {
     // ...
-    'todo': {
-        enabled: true,
-        resolve: './src/plugins/todo'
+    'url-image': {
+      enabled: true,
+      resolve: './src/plugins/url-image'
     },
     // ...
-}
+  }

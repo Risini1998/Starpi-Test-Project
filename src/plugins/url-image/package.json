@@ -1,12 +1,12 @@
 {
-  "name": "todo",
+  "name": "url-image",
   "version": "0.0.0",
   "description": "This is the description of the plugin.",
   "strapi": {
-    "name": "todo",
-    "description": "Description of Todo plugin",
+    "name": "url-image",
+    "description": "Description of Url Image plugin",
     "kind": "plugin",
-    "displayName": "Todo"
+    "displayName": "Url Image"
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.3",

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "categories"
+    },
+    "Image": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "pluginOptions": {
+        "url-image": {
+          "enabled": true
+        }
+      }
+    },
+    "new": {
+      "type": "customField",
+      "customField": "plugin::url-image.url-image"
+    }
+  }
+}
