@@ -4,7 +4,6 @@ import pluginId from './pluginId';
 import Initializer from './components/Initializer';
 import PluginIcon from './components/PluginIcon';
 import PictureIcon from './components/PictureIcon';
-import mutateEditViewHook from "./mutateEditViewHook";
 import UrlImage from './components/UrlImage';
 const name = pluginPkg.strapi.name;
 
@@ -132,10 +131,10 @@ export default {
   },
 
   bootstrap(app) {
-    app.registerHook(
-      "Admin/CM/pages/EditView/mutate-edit-view-layout",
-      mutateEditViewHook
-    )
+    // app.registerHook(
+    //   "Admin/CM/pages/EditView/mutate-edit-view-layout",
+    //   mutateEditViewHook
+    // )
   },
   async registerTrads({ locales }) {
     const importedTrads = await Promise.all(
