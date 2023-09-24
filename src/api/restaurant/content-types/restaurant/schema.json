@@ -22,6 +22,10 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "restaurants"
+    },
+    "resImage": {
+      "type": "customField",
+      "customField": "plugin::url-image.url-image"
     }
   }
 }

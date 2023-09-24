@@ -20,20 +20,6 @@
       "relation": "manyToMany",
       "target": "api::restaurant.restaurant",
       "inversedBy": "categories"
-    },
-    "Image": {
-      "type": "string",
-      "unique": true,
-      "required": true,
-      "pluginOptions": {
-        "url-image": {
-          "enabled": true
-        }
-      }
-    },
-    "new": {
-      "type": "customField",
-      "customField": "plugin::url-image.url-image"
     }
   }
 }

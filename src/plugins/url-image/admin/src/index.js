@@ -3,6 +3,7 @@ import pluginPkg from '../../package.json';
 import pluginId from './pluginId';
 import Initializer from './components/Initializer';
 import PluginIcon from './components/PluginIcon';
+import PictureIcon from './components/PictureIcon';
 import mutateEditViewHook from "./mutateEditViewHook";
 import UrlImage from './components/UrlImage';
 const name = pluginPkg.strapi.name;
@@ -49,9 +50,9 @@ export default {
       },
       intlDescription: {
         id: "url-image.url-image.description",
-        defaultMessage: "Select any image",
+        defaultMessage: "Select any image with URL",
       },
-      icon: PluginIcon, // don't forget to create/import your icon component
+      icon: PictureIcon, // don't forget to create/import your icon component
       components: {
         Input: async () =>
           // @ts-ignore

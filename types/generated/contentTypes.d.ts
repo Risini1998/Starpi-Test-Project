@@ -694,16 +694,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'manyToMany',
       'api::restaurant.restaurant'
     >;
-    Image: Attribute.String &
-      Attribute.Required &
-      Attribute.Unique &
-      Attribute.SetPluginOptions<{
-        'url-image': {
-          enabled: true;
-        };
-      }>;
-    new: Attribute.String &
-      Attribute.CustomField<'plugin::url-image.url-image'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -740,6 +730,8 @@ export interface ApiRestaurantRestaurant extends Schema.CollectionType {
       'manyToMany',
       'api::category.category'
     >;
+    resImage: Attribute.String &
+      Attribute.CustomField<'plugin::url-image.url-image'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
