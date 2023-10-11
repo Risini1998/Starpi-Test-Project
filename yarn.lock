@@ -7289,6 +7289,21 @@ react-select@5.7.0:
     react-transition-group "^4.3.0"
     use-isomorphic-layout-effect "^1.1.2"
 
+react-select@^5.7.7:
+  version "5.7.7"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-5.7.7.tgz#dbade9dbf711ef2a181970c10f8ab319ac37fbd0"
+  integrity sha512-HhashZZJDRlfF/AKj0a0Lnfs3sRdw/46VJIRd8IbB9/Ovr74+ZIwkAdSBjSPXsFMG+u72c5xShqwLSKIJllzqw==
+  dependencies:
+    "@babel/runtime" "^7.12.0"
+    "@emotion/cache" "^11.4.0"
+    "@emotion/react" "^11.8.1"
+    "@floating-ui/dom" "^1.0.1"
+    "@types/react-transition-group" "^4.4.0"
+    memoize-one "^6.0.0"
+    prop-types "^15.6.0"
+    react-transition-group "^4.3.0"
+    use-isomorphic-layout-effect "^1.1.2"
+
 react-side-effect@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.2.tgz#dc6345b9e8f9906dc2eeb68700b615e0b4fe752a"
@@ -8067,6 +8082,11 @@ std-env@^3.0.1:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.4.3.tgz#326f11db518db751c83fd58574f449b7c3060910"
   integrity sha512-f9aPhy8fYBuMN+sNfakZV18U39PbalgjXG3lLB9WkaYTxijru61wb57V9wxxNthXM5Sd88ETBWi29qLAsHO52Q==
+
+strapi-plugin-multi-select@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-multi-select/-/strapi-plugin-multi-select-1.2.2.tgz#eda123de6c6c6ec7346d17c1d63ce082a66db97e"
+  integrity sha512-D10hSUzFn7TU3fwH7SUn4/2dsL/JtSgyLLz7S8ozBQbK+GPjOJU264h6lpGppURkxwdXbihJvGzutZlM0DzFVQ==
 
 stream-chain@2.2.5, stream-chain@^2.2.5:
   version "2.2.5"

@@ -20,6 +20,10 @@
       "relation": "manyToMany",
       "target": "api::restaurant.restaurant",
       "inversedBy": "categories"
+    },
+    "bestRes": {
+      "type": "customField",
+      "customField": "plugin::select-type.select-type"
     }
   }
 }

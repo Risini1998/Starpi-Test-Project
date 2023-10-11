@@ -4,5 +4,9 @@ module.exports = {
       enabled: true,
       resolve: './src/plugins/url-image'
     },
+    'select-type': {
+      enabled: true,
+      resolve: './src/plugins/select-type'
+    },
     // ...
   }
