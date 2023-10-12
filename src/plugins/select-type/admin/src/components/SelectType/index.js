@@ -19,11 +19,7 @@ const SelectType = ({
   const { formatMessage } = useIntl();
 
   const [options, setOptions] = useState([]);
-  // const [selectedRestaurant, setSelectedRestaurant] = useState(null);
-
-  // useEffect(()=>{
-  //   console.log(entry)
-  // }, [entry])
+  const [select, setSelect] = useState();
 
   useEffect(() => {
     // Fetch the restaurants from the Strapi API
@@ -32,29 +28,33 @@ const SelectType = ({
       .then(data => {
         const selectOptions = data.data.map(restaurant => ({
           value: restaurant.attributes.Name,
-          label: restaurant.attributes.Name, // Assuming 'name' is a field in your restaurant content type
+          label: restaurant.attributes.Name,
         }));
         setOptions(selectOptions)
       })
       .catch(error => console.error('Error fetching restaurants:', error));
   }, [])
 
-  useEffect(() => {
-    console.log('options', options)
-    console.log('attribute', attribute,
-      'description', description,
-      'disabled', disabled,
-      'error', error,
-      'intlLabel', intlLabel,
-      name,
-      onChange,
-      placeholder,
-      required,
-      value)
-  }, [options])
+  useEffect(()=>{
+    const find = options.find(option => option.value === value)
+    setSelect(find)
+  }, [value, options])
+
+  // useEffect(() => {
+  //   console.log('options', options)
+  //   console.log('attribute', attribute,
+  //     'description', description,
+  //     'disabled', disabled,
+  //     'error', error,
+  //     'intlLabel', intlLabel,
+  //     name,
+  //     onChange,
+  //     placeholder,
+  //     required,
+  //     value)
+  // }, [options])
 
   const handleSelectChange = (event) => {
-    console.log('event', event)
     onChange({ target: { name, value: event.value, type: attribute.type } })
   }
 
@@ -65,7 +65,7 @@ const SelectType = ({
         <Select
           name={name}
           isDisabled={disabled}
-          value={value.value}
+          value={select}
           onChange={handleSelectChange}
           options={options}
           required={required}
